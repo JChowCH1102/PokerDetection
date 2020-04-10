@@ -13,6 +13,9 @@
 		F6B7B78B2440868B003231FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B7B7892440868B003231FA /* Main.storyboard */; };
 		F6B7B78D24408693003231FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6B7B78C24408693003231FA /* Assets.xcassets */; };
 		F6B7B79024408693003231FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B7B78E24408693003231FA /* LaunchScreen.storyboard */; };
+		F6B7B79924408B19003231FA /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7B79824408B19003231FA /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
+		F6B7B79B24408BB6003231FA /* PokerDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7B79A24408BB6003231FA /* PokerDetectionViewController.swift */; };
+		F6B7B79D24409657003231FA /* MyCustomOneShotDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F6B7B79C24409657003231FA /* MyCustomOneShotDetector.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F6B7B78C24408693003231FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6B7B78F24408693003231FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6B7B79124408693003231FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6B7B79824408B19003231FA /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
+		F6B7B79A24408BB6003231FA /* PokerDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerDetectionViewController.swift; sourceTree = "<group>"; };
+		F6B7B79C24409657003231FA /* MyCustomOneShotDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyCustomOneShotDetector.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				F6B7B78C24408693003231FA /* Assets.xcassets */,
 				F6B7B78E24408693003231FA /* LaunchScreen.storyboard */,
 				F6B7B79124408693003231FA /* Info.plist */,
+				F6B7B79824408B19003231FA /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				F6B7B79A24408BB6003231FA /* PokerDetectionViewController.swift */,
+				F6B7B79C24409657003231FA /* MyCustomOneShotDetector.mlmodel */,
 			);
 			path = PokerDetection;
 			sourceTree = "<group>";
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B7B79D24409657003231FA /* MyCustomOneShotDetector.mlmodel in Sources */,
+				F6B7B79924408B19003231FA /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				F6B7B7882440868B003231FA /* ViewController.swift in Sources */,
 				F6B7B7842440868B003231FA /* AppDelegate.swift in Sources */,
 				F6B7B7862440868B003231FA /* SceneDelegate.swift in Sources */,
+				F6B7B79B24408BB6003231FA /* PokerDetectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,16 +7,75 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Poker Detection View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokerDetection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PokerDetectionViewController" customModule="PokerDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ImC-1F-D0m">
+                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="X5q-vP-jSu">
+                                        <connections>
+                                            <action selector="takePicture" destination="BYZ-38-t0r" id="mPy-b7-l4b"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VFO-5t-Gfj"/>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cXv-n4-uJJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8V-uc-urV">
+                                <rect key="frame" x="20" y="770.5" width="138" height="60.5"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gKC-cL-8Ux">
+                                    <rect key="frame" x="0.0" y="0.0" width="138" height="60.5"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Add a photo." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ow7-Z1-gUd">
+                                            <rect key="frame" x="20" y="20" width="98" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ow7-Z1-gUd" firstAttribute="top" secondItem="gKC-cL-8Ux" secondAttribute="top" constant="20" symbolic="YES" id="Dh2-iV-lIq"/>
+                                        <constraint firstAttribute="bottom" secondItem="ow7-Z1-gUd" secondAttribute="bottom" constant="20" symbolic="YES" id="Wq6-6G-DbG"/>
+                                        <constraint firstAttribute="trailing" secondItem="ow7-Z1-gUd" secondAttribute="trailing" constant="20" symbolic="YES" id="Yn1-8o-H2P"/>
+                                        <constraint firstItem="ow7-Z1-gUd" firstAttribute="leading" secondItem="gKC-cL-8Ux" secondAttribute="leading" constant="20" symbolic="YES" id="otr-gd-PAu"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cXv-n4-uJJ" secondAttribute="bottom" id="CA8-CE-zbP"/>
+                            <constraint firstAttribute="trailing" secondItem="cXv-n4-uJJ" secondAttribute="trailing" id="H3W-aw-hNj"/>
+                            <constraint firstItem="ImC-1F-D0m" firstAttribute="top" secondItem="b8V-uc-urV" secondAttribute="bottom" constant="16" id="NfZ-pI-yam"/>
+                            <constraint firstItem="cXv-n4-uJJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PQZ-Qm-Qlf"/>
+                            <constraint firstItem="cXv-n4-uJJ" firstAttribute="trailing" secondItem="ImC-1F-D0m" secondAttribute="trailing" id="WCE-fH-She"/>
+                            <constraint firstItem="b8V-uc-urV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xt1-48-Zno"/>
+                            <constraint firstItem="cXv-n4-uJJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="b6p-Ks-HgT"/>
+                            <constraint firstItem="cXv-n4-uJJ" firstAttribute="bottom" secondItem="ImC-1F-D0m" secondAttribute="bottom" id="cGB-Fr-THH"/>
+                            <constraint firstItem="cXv-n4-uJJ" firstAttribute="leading" secondItem="ImC-1F-D0m" secondAttribute="leading" id="egy-9U-PjQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="X5q-vP-jSu" id="bMg-vO-pJD"/>
+                        <outlet property="classificationLabel" destination="ow7-Z1-gUd" id="NZG-gK-0X1"/>
+                        <outlet property="imageView" destination="cXv-n4-uJJ" id="Kb0-rb-I8V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
