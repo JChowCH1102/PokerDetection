@@ -68,18 +68,16 @@
 		F6B7B7822440868B003231FA /* PokerDetection */ = {
 			isa = PBXGroup;
 			children = (
+				F6B7B7A32442DA65003231FA /* useless file */,
 				F6B7B7A0244106F0003231FA /* model */,
 				F6B7B7832440868B003231FA /* AppDelegate.swift */,
-				D563D2202442D26A006DD0C2 /* MenuViewController.swift */,
 				F6B7B7852440868B003231FA /* SceneDelegate.swift */,
-				F6B7B7872440868B003231FA /* ViewController.swift */,
 				F6B7B7892440868B003231FA /* Main.storyboard */,
 				F6B7B78C24408693003231FA /* Assets.xcassets */,
 				F6B7B78E24408693003231FA /* LaunchScreen.storyboard */,
 				F6B7B79124408693003231FA /* Info.plist */,
 				F6B7B79824408B19003231FA /* CGImagePropertyOrientation+UIImageOrientation.swift */,
 				F6B7B79A24408BB6003231FA /* PokerDetectionViewController.swift */,
-				F6B7B79C24409657003231FA /* MyCustomOneShotDetector.mlmodel */,
 				F6B7B7A12441072B003231FA /* Flush.swift */,
 			);
 			path = PokerDetection;
@@ -91,6 +89,16 @@
 				F6B7B79E244106DC003231FA /* Poker.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		F6B7B7A32442DA65003231FA /* useless file */ = {
+			isa = PBXGroup;
+			children = (
+				D563D2202442D26A006DD0C2 /* MenuViewController.swift */,
+				F6B7B7872440868B003231FA /* ViewController.swift */,
+				F6B7B79C24409657003231FA /* MyCustomOneShotDetector.mlmodel */,
+			);
+			path = "useless file";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

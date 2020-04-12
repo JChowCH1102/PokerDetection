@@ -15,8 +15,8 @@ class PokerDetectionViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var cameraButton: UIBarButtonItem!
+//    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var classificationLabel: UILabel!
     
     // MARK: - Object Detection
@@ -113,7 +113,7 @@ extension PokerDetectionViewController: UIImagePickerControllerDelegate, UINavig
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
         
-        imageView.image = image
+        cameraButton.setBackgroundImage(image, for: .normal)
         updateClassifications(for: image)
     }
     

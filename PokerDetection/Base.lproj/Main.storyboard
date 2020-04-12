@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Poker_Detection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PokerDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,31 +36,64 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--Poker Detection View Controller-->
         <scene sceneID="1Kc-mt-h7i">
             <objects>
-                <viewController id="QYz-3p-NrI" customClass="MenuViewController" customModule="Poker_Detection" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QYz-3p-NrI" customClass="PokerDetectionViewController" customModule="PokerDetection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WTL-MM-Zlo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-bg2" translatesAutoresizingMaskIntoConstraints="NO" id="6l6-Ix-sUI">
-                                <rect key="frame" x="0.0" y="0.0" width="424" height="795"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-bg2" translatesAutoresizingMaskIntoConstraints="NO" id="6l6-Ix-sUI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UB-IB-4Jk">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UB-IB-4Jk">
                                 <rect key="frame" x="72" y="85" width="270" height="270"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="48M-97-Q0T"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="Image-2"/>
                                 <connections>
-                                    <action selector="buttonClicked:" destination="QYz-3p-NrI" eventType="touchUpInside" id="lMK-4S-sAV"/>
+                                    <action selector="takePicture" destination="QYz-3p-NrI" eventType="touchUpInside" id="bRN-aZ-TaA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Poker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E80-va-wGO">
+                                <rect key="frame" x="72" y="442" width="270" height="254"/>
+                                <color key="backgroundColor" red="0.94663151916341737" green="0.94339068411392935" blue="1" alpha="0.86738006161971826" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="254" id="zKM-ZQ-407"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6l6-Ix-sUI" firstAttribute="top" secondItem="NBV-zw-Quh" secondAttribute="top" id="29T-ub-QK2"/>
+                            <constraint firstItem="E80-va-wGO" firstAttribute="top" secondItem="9UB-IB-4Jk" secondAttribute="bottom" constant="87" id="5SO-9A-c4K"/>
+                            <constraint firstAttribute="trailing" secondItem="6l6-Ix-sUI" secondAttribute="trailing" id="Uf1-ng-PgR"/>
+                            <constraint firstItem="NBV-zw-Quh" firstAttribute="trailing" secondItem="9UB-IB-4Jk" secondAttribute="trailing" constant="72" id="kb5-pK-FnN"/>
+                            <constraint firstItem="6l6-Ix-sUI" firstAttribute="leading" secondItem="NBV-zw-Quh" secondAttribute="leading" id="lxZ-uS-fFt"/>
+                            <constraint firstItem="9UB-IB-4Jk" firstAttribute="leading" secondItem="NBV-zw-Quh" secondAttribute="leading" constant="72" id="rIM-vA-6ZP"/>
+                            <constraint firstItem="NBV-zw-Quh" firstAttribute="trailing" secondItem="E80-va-wGO" secondAttribute="trailing" constant="72" id="rn4-5m-BhM"/>
+                            <constraint firstItem="9UB-IB-4Jk" firstAttribute="top" secondItem="NBV-zw-Quh" secondAttribute="top" constant="85" id="tTh-N9-ygC"/>
+                            <constraint firstItem="E80-va-wGO" firstAttribute="leading" secondItem="NBV-zw-Quh" secondAttribute="leading" constant="72" id="wcY-YY-iBC"/>
+                            <constraint firstItem="NBV-zw-Quh" firstAttribute="bottom" secondItem="6l6-Ix-sUI" secondAttribute="bottom" id="ytp-ed-IV2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NBV-zw-Quh"/>
                     </view>
                     <navigationItem key="navigationItem" id="ONZ-pi-nYY"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="9UB-IB-4Jk" id="fLU-Dv-YZh"/>
+                        <outlet property="classificationLabel" destination="E80-va-wGO" id="BRW-JY-Clv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNd-dB-Xre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
