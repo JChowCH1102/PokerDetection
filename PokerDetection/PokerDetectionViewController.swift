@@ -70,6 +70,7 @@ class PokerDetectionViewController: UIViewController {
                 self.classificationLabel.text = "Nothing recognized."
             } else {
                 self.detectedPokers = []
+                pokers = []
                 
                 //JCHOWCH WARNING： THIS PROCRESS IS FOR LOUIS CreateML TRAINED MODEL
                 //do the classification for the detect results
