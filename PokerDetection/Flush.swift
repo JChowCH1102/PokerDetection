@@ -27,6 +27,33 @@ func addPoker(pokerNumber: Poker.PokerNumber, pokerSuit: Poker.PokerSuit) {
     }
 }
 
+func addPoker(a: String, b:String) {
+    if let suit: Poker.PokerSuit = Poker.PokerSuit(rawValue: a), let num = stringNumber2PokerNumber(b) {
+        addPoker(pokerNumber: num, pokerSuit: suit)
+    } else if let suit: Poker.PokerSuit = Poker.PokerSuit(rawValue: b), let num = stringNumber2PokerNumber(a) {
+        addPoker(pokerNumber: num, pokerSuit: suit)
+    }
+}
+
+func stringNumber2PokerNumber(_ str: String) -> Poker.PokerNumber? {
+    switch str {
+        case "ace": return Poker.PokerNumber.ace
+        case "two": return Poker.PokerNumber.two
+        case "three": return Poker.PokerNumber.three
+        case "four": return Poker.PokerNumber.four
+        case "five": return Poker.PokerNumber.five
+        case "six": return Poker.PokerNumber.six
+        case "seven": return Poker.PokerNumber.seven
+        case "eight": return Poker.PokerNumber.eight
+        case "nine": return Poker.PokerNumber.nine
+        case "ten": return Poker.PokerNumber.ten
+        case "jack": return Poker.PokerNumber.jack
+        case "queen": return Poker.PokerNumber.queen
+        case "king": return Poker.PokerNumber.king
+        default: return nil
+    }
+}
+
 func pokerFlush() -> String {
     guard pokers.count == 5 else {
         return "Not 5 cards in here"
@@ -83,4 +110,12 @@ func isInOrder()-> Bool {
     } else {
         return false
     }
+}
+
+func listPokers()-> String {
+    var pokerList: String = ""
+    pokers.forEach { poker in
+        pokerList += "\(poker.pokerNumber) \(poker.pokerSuit) \n"
+    }
+    return pokerList
 }

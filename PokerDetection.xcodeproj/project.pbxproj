@@ -19,6 +19,8 @@
 		F6B7B79D24409657003231FA /* MyCustomOneShotDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F6B7B79C24409657003231FA /* MyCustomOneShotDetector.mlmodel */; };
 		F6B7B79F244106DC003231FA /* Poker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7B79E244106DC003231FA /* Poker.swift */; };
 		F6B7B7A22441072B003231FA /* Flush.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7B7A12441072B003231FA /* Flush.swift */; };
+		F6D6EC332457E7F00032C576 /* poker flush detection 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F6D6EC322457E7F00032C576 /* poker flush detection 1.mlmodel */; };
+		F6D6EC352457F0F80032C576 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D6EC342457F0F80032C576 /* constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		F6B7B79C24409657003231FA /* MyCustomOneShotDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MyCustomOneShotDetector.mlmodel; sourceTree = "<group>"; };
 		F6B7B79E244106DC003231FA /* Poker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poker.swift; sourceTree = "<group>"; };
 		F6B7B7A12441072B003231FA /* Flush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flush.swift; sourceTree = "<group>"; };
+		F6D6EC322457E7F00032C576 /* poker flush detection 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "poker flush detection 1.mlmodel"; sourceTree = "<group>"; };
+		F6D6EC342457F0F80032C576 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 				F6B7B79824408B19003231FA /* CGImagePropertyOrientation+UIImageOrientation.swift */,
 				F6B7B79A24408BB6003231FA /* PokerDetectionViewController.swift */,
 				F6B7B7A12441072B003231FA /* Flush.swift */,
+				F6D6EC322457E7F00032C576 /* poker flush detection 1.mlmodel */,
+				F6D6EC342457F0F80032C576 /* constant.swift */,
 			);
 			path = PokerDetection;
 			sourceTree = "<group>";
@@ -176,11 +182,13 @@
 				F6B7B79D24409657003231FA /* MyCustomOneShotDetector.mlmodel in Sources */,
 				F6B7B79924408B19003231FA /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				F6B7B79F244106DC003231FA /* Poker.swift in Sources */,
+				F6D6EC332457E7F00032C576 /* poker flush detection 1.mlmodel in Sources */,
 				D563D2212442D26A006DD0C2 /* MenuViewController.swift in Sources */,
 				F6B7B7882440868B003231FA /* ViewController.swift in Sources */,
 				F6B7B7842440868B003231FA /* AppDelegate.swift in Sources */,
 				F6B7B7862440868B003231FA /* SceneDelegate.swift in Sources */,
 				F6B7B79B24408BB6003231FA /* PokerDetectionViewController.swift in Sources */,
+				F6D6EC352457F0F80032C576 /* constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -57,7 +57,7 @@
                                     <action selector="takePicture" destination="QYz-3p-NrI" eventType="touchUpInside" id="bRN-aZ-TaA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Poker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E80-va-wGO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Poker" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E80-va-wGO">
                                 <rect key="frame" x="72" y="442" width="270" height="254"/>
                                 <color key="backgroundColor" red="0.94663151916341737" green="0.94339068411392935" blue="1" alpha="0.86738006161971826" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
