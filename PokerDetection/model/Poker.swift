@@ -13,26 +13,23 @@ struct Poker {
     var pokerNumber: PokerNumber
     var pokerSuit: PokerSuit
     
-    enum PokerSuit{
-        case diamond
-        case club
-        case heart
-        case spade
+    enum PokerSuit: String{
+        case diamonds, clubs, hearts, spades
     }
     
     enum PokerNumber: Int{
-        case A = 13
-        case Two = 1
-        case Three = 2
-        case Four = 3
-        case Five = 4
-        case Six = 5
-        case Seven = 6
-        case Eight = 7
-        case Nine = 8
-        case Ten = 9
-        case J = 10
-        case Q = 11
-        case K = 12
+        case ace = 13
+        case two = 1
+        case three = 2
+        case four = 3
+        case five = 4
+        case six = 5
+        case seven = 6
+        case eight = 7
+        case nine = 8
+        case ten = 9
+        case jack = 10
+        case queen = 11
+        case king = 12
     }
 }
