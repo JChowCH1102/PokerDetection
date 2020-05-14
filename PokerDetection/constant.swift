@@ -8,4 +8,4 @@
 
 import Foundation
 
-let POKER_DETECTION_MODEL = poker_flush_detection_1().model
+let POKER_DETECTION_MODEL = PokerDetection_CreateML_2().model
