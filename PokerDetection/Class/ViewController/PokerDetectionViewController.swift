@@ -11,13 +11,13 @@ import CoreML
 import Vision
 import ImageIO
 
+struct detectedPoker {
+    var objectIdentifier: String
+    var objectConfidence: Float
+    var objectBoundingBox: CGRect
+}
+
 class PokerDetectionViewController: UIViewController {
-    
-    struct detectedPoker {
-        var objectIdentifier: String
-        var objectConfidence: Float
-        var objectBoundingBox: CGRect
-    }
     
     var detectedPokers: [detectedPoker] = []
     
@@ -36,7 +36,7 @@ class PokerDetectionViewController: UIViewController {
                 [weak self] request, error in
                 self?.processClassifications(for: request, error: error)
             })
-            request.imageCropAndScaleOption = .scaleFit
+            request.imageCropAndScaleOption = .scaleFill
             return request
         } catch {
             fatalError("Failed to load Vision ML model: \(error)")
@@ -77,8 +77,7 @@ class PokerDetectionViewController: UIViewController {
                 for classification in classifications {
                     var objectIdentifier = ""
                     var objectConfidence: Float = 0.0
-                    var objectBoundingBox: CGRect = CGRect()
-                    objectBoundingBox = classification.boundingBox
+                    let objectBoundingBox: CGRect = classification.boundingBox
                     for label in classification.labels {
                         if objectConfidence.isLess(than: Float(label.confidence)) {
                             objectIdentifier = label.identifier
@@ -88,20 +87,10 @@ class PokerDetectionViewController: UIViewController {
                     self.detectedPokers.append(detectedPoker(objectIdentifier: objectIdentifier, objectConfidence: objectConfidence, objectBoundingBox: objectBoundingBox))
                 }
                 
-                //calculate combin of pokers
-                let count = self.detectedPokers.count - 1
-                for i in 0...count {
-                    for j in i...count {
-                        if abs(self.detectedPokers[i].objectBoundingBox.minX - self.detectedPokers[j].objectBoundingBox.minX) <= 0.1, abs(self.detectedPokers[i].objectBoundingBox.minY - self.detectedPokers[j].objectBoundingBox.minY) <= 0.1 {
-                            
-                            //try add to poker array
-                            addPoker(a: self.detectedPokers[i].objectIdentifier, b:self.detectedPokers[j].objectIdentifier)
-                        }
-                    }
-                }
+                toPokers(self.detectedPokers)
                 
                 //print results
-                self.classificationLabel.text = "Classification:\n \(listPokers())"
+                self.classificationLabel.text = "Classification:\n \(pokerFlush())"
             }
         }
     }

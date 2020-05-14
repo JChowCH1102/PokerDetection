@@ -10,7 +10,7 @@ import Foundation
 
 var pokers:[Poker] = []
 
-func addPoker(pokerNumber: Poker.PokerNumber, pokerSuit: Poker.PokerSuit) {
+func addPoker(pokerNumber: Poker.PokerNumber, pokerSuit: Poker.PokerSuit) -> Bool {
     
     let newPoker = Poker(pokerNumber: pokerNumber, pokerSuit: pokerSuit)
     var didInsertPoker = true
@@ -24,15 +24,18 @@ func addPoker(pokerNumber: Poker.PokerNumber, pokerSuit: Poker.PokerSuit) {
     if didInsertPoker {
         pokers.append(newPoker)
         pokers.sort { $0.pokerNumber.rawValue < $1.pokerNumber.rawValue }
+        print("Added a poker \(newPoker.pokerNumber) \(newPoker.pokerSuit)")
     }
+    return didInsertPoker
 }
 
-func addPoker(a: String, b:String) {
+func addPoker(a: String, b:String) -> Bool {
     if let suit: Poker.PokerSuit = Poker.PokerSuit(rawValue: a), let num = stringNumber2PokerNumber(b) {
-        addPoker(pokerNumber: num, pokerSuit: suit)
+        return addPoker(pokerNumber: num, pokerSuit: suit)
     } else if let suit: Poker.PokerSuit = Poker.PokerSuit(rawValue: b), let num = stringNumber2PokerNumber(a) {
-        addPoker(pokerNumber: num, pokerSuit: suit)
+        return addPoker(pokerNumber: num, pokerSuit: suit)
     }
+    return false
 }
 
 func stringNumber2PokerNumber(_ str: String) -> Poker.PokerNumber? {
@@ -56,7 +59,7 @@ func stringNumber2PokerNumber(_ str: String) -> Poker.PokerNumber? {
 
 func pokerFlush() -> String {
     guard pokers.count == 5 else {
-        return "Not 5 cards in here"
+        return listPokers()
     }
     
     if pokers[0].pokerSuit == pokers[1].pokerSuit, pokers[0].pokerSuit == pokers[2].pokerSuit, pokers[0].pokerSuit == pokers[3].pokerSuit, pokers[0].pokerSuit == pokers[4].pokerSuit {
@@ -65,7 +68,6 @@ func pokerFlush() -> String {
         if isInOrder() { return "Straight Flush" } else { return "Flush" }
         
     } else {
-        if isInOrder() { return "Straight" }
         if !pokerRepeatCombinations(from: pokers, size: 4).isEmpty { return "Four of a kind" }
         let threeOfAKind = pokerRepeatCombinations(from: pokers, size: 3)
         if !threeOfAKind.isEmpty {
@@ -82,6 +84,7 @@ func pokerFlush() -> String {
         }
         let pairArray = pokerRepeatCombinations(from: pokers, size: 2)
         if !pairArray.isEmpty { return "\(pairArray.count) Pair"}
+        if isInOrder() { return "Straight" }
     }
     return "High card"
 }
@@ -117,5 +120,6 @@ func listPokers()-> String {
     pokers.forEach { poker in
         pokerList += "\(poker.pokerNumber) \(poker.pokerSuit) \n"
     }
+    print(pokerList)
     return pokerList
 }
