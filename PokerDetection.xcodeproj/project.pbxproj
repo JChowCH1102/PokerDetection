@@ -66,18 +66,9 @@
 		F6B7B7822440868B003231FA /* PokerDetection */ = {
 			isa = PBXGroup;
 			children = (
-				F6B7B7A0244106F0003231FA /* model */,
-				F6B7B7832440868B003231FA /* AppDelegate.swift */,
-				F6B7B7852440868B003231FA /* SceneDelegate.swift */,
-				F6B7B7892440868B003231FA /* Main.storyboard */,
-				F6B7B78C24408693003231FA /* Assets.xcassets */,
-				F6B7B78E24408693003231FA /* LaunchScreen.storyboard */,
+				F6E13B30246DAF5D0060A872 /* Resource */,
+				F6E13B2C246DAF160060A872 /* Class */,
 				F6B7B79124408693003231FA /* Info.plist */,
-				F6B7B79824408B19003231FA /* CGImagePropertyOrientation+UIImageOrientation.swift */,
-				F6B7B79A24408BB6003231FA /* PokerDetectionViewController.swift */,
-				F6B7B7A12441072B003231FA /* Flush.swift */,
-				F6D6EC342457F0F80032C576 /* constant.swift */,
-				F628C2D0246D96F6007C5DF3 /* PokerDetection_CreateML 2.mlmodel */,
 			);
 			path = PokerDetection;
 			sourceTree = "<group>";
@@ -88,6 +79,63 @@
 				F6B7B79E244106DC003231FA /* Poker.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		F6E13B2C246DAF160060A872 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F6B7B7A12441072B003231FA /* Flush.swift */,
+				F6E13B31246DAF870060A872 /* Constant */,
+				F6E13B2F246DAF470060A872 /* Delegate */,
+				F6B7B7A0244106F0003231FA /* model */,
+				F6E13B2E246DAF2E0060A872 /* ViewController */,
+				F6E13B2D246DAF230060A872 /* Helper */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		F6E13B2D246DAF230060A872 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F6B7B79824408B19003231FA /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F6E13B2E246DAF2E0060A872 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F6B7B79A24408BB6003231FA /* PokerDetectionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F6E13B2F246DAF470060A872 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				F6B7B7832440868B003231FA /* AppDelegate.swift */,
+				F6B7B7852440868B003231FA /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		F6E13B30246DAF5D0060A872 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F628C2D0246D96F6007C5DF3 /* PokerDetection_CreateML 2.mlmodel */,
+				F6B7B7892440868B003231FA /* Main.storyboard */,
+				F6B7B78C24408693003231FA /* Assets.xcassets */,
+				F6B7B78E24408693003231FA /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F6E13B31246DAF870060A872 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				F6D6EC342457F0F80032C576 /* constant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
