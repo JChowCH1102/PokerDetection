@@ -68,7 +68,6 @@ func pokerFlush() -> String {
         if isInOrder() { return "Straight Flush" } else { return "Flush" }
         
     } else {
-        if isInOrder() { return "Straight" }
         if !pokerRepeatCombinations(from: pokers, size: 4).isEmpty { return "Four of a kind" }
         let threeOfAKind = pokerRepeatCombinations(from: pokers, size: 3)
         if !threeOfAKind.isEmpty {
@@ -85,6 +84,7 @@ func pokerFlush() -> String {
         }
         let pairArray = pokerRepeatCombinations(from: pokers, size: 2)
         if !pairArray.isEmpty { return "\(pairArray.count) Pair"}
+        if isInOrder() { return "Straight" }
     }
     return "High card"
 }
