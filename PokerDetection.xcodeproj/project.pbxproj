@@ -18,6 +18,8 @@
 		F6B7B79F244106DC003231FA /* Poker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7B79E244106DC003231FA /* Poker.swift */; };
 		F6B7B7A22441072B003231FA /* Flush.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7B7A12441072B003231FA /* Flush.swift */; };
 		F6D6EC352457F0F80032C576 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D6EC342457F0F80032C576 /* constant.swift */; };
+		F6E13B3A246DC0240060A872 /* DetectedResults2Pokers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E13B39246DC0240060A872 /* DetectedResults2Pokers.swift */; };
+		F6E13B3E246DC2DC0060A872 /* CGPoint_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E13B3D246DC2DC0060A872 /* CGPoint_Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		F6B7B79E244106DC003231FA /* Poker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poker.swift; sourceTree = "<group>"; };
 		F6B7B7A12441072B003231FA /* Flush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flush.swift; sourceTree = "<group>"; };
 		F6D6EC342457F0F80032C576 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
+		F6E13B39246DC0240060A872 /* DetectedResults2Pokers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectedResults2Pokers.swift; sourceTree = "<group>"; };
+		F6E13B3D246DC2DC0060A872 /* CGPoint_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint_Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 				F6B7B7A0244106F0003231FA /* model */,
 				F6E13B2E246DAF2E0060A872 /* ViewController */,
 				F6E13B2D246DAF230060A872 /* Helper */,
+				F6E13B39246DC0240060A872 /* DetectedResults2Pokers.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				F6B7B79824408B19003231FA /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				F6E13B3D246DC2DC0060A872 /* CGPoint_Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -210,12 +216,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6B7B7A22441072B003231FA /* Flush.swift in Sources */,
+				F6E13B3A246DC0240060A872 /* DetectedResults2Pokers.swift in Sources */,
 				F6B7B79924408B19003231FA /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				F6B7B79F244106DC003231FA /* Poker.swift in Sources */,
 				F628C2D1246D96F6007C5DF3 /* PokerDetection_CreateML 2.mlmodel in Sources */,
 				F6B7B7842440868B003231FA /* AppDelegate.swift in Sources */,
 				F6B7B7862440868B003231FA /* SceneDelegate.swift in Sources */,
 				F6B7B79B24408BB6003231FA /* PokerDetectionViewController.swift in Sources */,
+				F6E13B3E246DC2DC0060A872 /* CGPoint_Extension.swift in Sources */,
 				F6D6EC352457F0F80032C576 /* constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
