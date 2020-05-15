@@ -46,6 +46,10 @@ func toPokers(_ detectedPokers: [detectedPoker]) {
     
     var newDetectedPokers = detectedPokers
     
+    if resultCombinations.count == 1, !addPoker(a: detectedPokers[resultCombinations[0].i].objectIdentifier, b: detectedPokers[resultCombinations[0].j].objectIdentifier) {
+        return
+    }
+    
     for combin in resultCombinations {
         if addPoker(a: detectedPokers[combin.i].objectIdentifier, b: detectedPokers[combin.j].objectIdentifier) {
             newDetectedPokers.remove(at: combin.j)
