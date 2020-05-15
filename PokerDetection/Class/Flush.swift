@@ -109,9 +109,9 @@ func pokerRepeatCombinations(with combinationThusFar: [Poker] = [], from array: 
 
 func isInOrder()-> Bool {
     if pokers[0].pokerNumber.rawValue - pokers[1].pokerNumber.rawValue != -1, pokers[1].pokerNumber.rawValue - pokers[2].pokerNumber.rawValue != -1, pokers[2].pokerNumber.rawValue - pokers[3].pokerNumber.rawValue != -1, pokers[3].pokerNumber.rawValue - pokers[4].pokerNumber.rawValue != -1 {
-        return true
-    } else {
         return false
+    } else {
+        return true
     }
 }
 
