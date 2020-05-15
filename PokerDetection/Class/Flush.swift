@@ -23,37 +23,36 @@ func addPoker(pokerNumber: Poker.PokerNumber, pokerSuit: Poker.PokerSuit) -> Boo
     }
     if didInsertPoker {
         pokers.append(newPoker)
-        pokers.sort { $0.pokerNumber.rawValue < $1.pokerNumber.rawValue }
+        pokers.sort { pokerNumber2LogicalNumber($0.pokerNumber) < pokerNumber2LogicalNumber($1.pokerNumber) }
         print("Added a poker \(newPoker.pokerNumber) \(newPoker.pokerSuit)")
     }
     return didInsertPoker
 }
 
 func addPoker(a: String, b:String) -> Bool {
-    if let suit: Poker.PokerSuit = Poker.PokerSuit(rawValue: a), let num = stringNumber2PokerNumber(b) {
+    if let suit = Poker.PokerSuit(rawValue: a), let num = Poker.PokerNumber(rawValue: b) {
         return addPoker(pokerNumber: num, pokerSuit: suit)
-    } else if let suit: Poker.PokerSuit = Poker.PokerSuit(rawValue: b), let num = stringNumber2PokerNumber(a) {
+    } else if let suit = Poker.PokerSuit(rawValue: b), let num = Poker.PokerNumber(rawValue: a) {
         return addPoker(pokerNumber: num, pokerSuit: suit)
     }
     return false
 }
 
-func stringNumber2PokerNumber(_ str: String) -> Poker.PokerNumber? {
-    switch str {
-        case "ace": return Poker.PokerNumber.ace
-        case "two": return Poker.PokerNumber.two
-        case "three": return Poker.PokerNumber.three
-        case "four": return Poker.PokerNumber.four
-        case "five": return Poker.PokerNumber.five
-        case "six": return Poker.PokerNumber.six
-        case "seven": return Poker.PokerNumber.seven
-        case "eight": return Poker.PokerNumber.eight
-        case "nine": return Poker.PokerNumber.nine
-        case "ten": return Poker.PokerNumber.ten
-        case "jack": return Poker.PokerNumber.jack
-        case "queen": return Poker.PokerNumber.queen
-        case "king": return Poker.PokerNumber.king
-        default: return nil
+func pokerNumber2LogicalNumber(_ pokerNumber: Poker.PokerNumber) -> Int {
+    switch pokerNumber {
+    case .ace : return 13
+    case .two : return 1
+    case .three : return 2
+    case .four : return 3
+    case .five : return 4
+    case .six : return 5
+    case .seven : return 6
+    case .eight : return 7
+    case .nine : return 8
+    case .ten : return 9
+    case .jack : return 10
+    case .queen : return 11
+    case .king : return 12
     }
 }
 
@@ -108,7 +107,7 @@ func pokerRepeatCombinations(with combinationThusFar: [Poker] = [], from array: 
 }
 
 func isInOrder()-> Bool {
-    if pokers[0].pokerNumber.rawValue - pokers[1].pokerNumber.rawValue != -1, pokers[1].pokerNumber.rawValue - pokers[2].pokerNumber.rawValue != -1, pokers[2].pokerNumber.rawValue - pokers[3].pokerNumber.rawValue != -1, pokers[3].pokerNumber.rawValue - pokers[4].pokerNumber.rawValue != -1 {
+    if pokerNumber2LogicalNumber(pokers[0].pokerNumber) - pokerNumber2LogicalNumber(pokers[1].pokerNumber) != -1, pokerNumber2LogicalNumber(pokers[1].pokerNumber) - pokerNumber2LogicalNumber(pokers[2].pokerNumber) != -1, pokerNumber2LogicalNumber(pokers[2].pokerNumber) - pokerNumber2LogicalNumber(pokers[3].pokerNumber) != -1, pokerNumber2LogicalNumber(pokers[3].pokerNumber) - pokerNumber2LogicalNumber(pokers[4].pokerNumber) != -1 {
         return false
     } else {
         return true

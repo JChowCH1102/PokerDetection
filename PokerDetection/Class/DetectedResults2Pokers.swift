@@ -20,6 +20,16 @@ func toPokers(_ detectedPokers: [detectedPoker]) {
     
     for i in 0...detectedPokers.count - 1 {
         for j in i...detectedPokers.count - 1 {
+            
+            let objA = detectedPokers[i].objectIdentifier
+            let objB = detectedPokers[j].objectIdentifier
+            
+            if let _ = Poker.PokerSuit(rawValue: objA), let _: Poker.PokerSuit = Poker.PokerSuit(rawValue: objB) {
+                continue
+            } else if let _ = Poker.PokerNumber(rawValue: objB), let _ = Poker.PokerNumber(rawValue: objA) {
+                continue
+            }
+            
             let coordinateI = CGPoint(x: detectedPokers[i].objectBoundingBox.minX, y: detectedPokers[i].objectBoundingBox.minY)
             let coordinateJ = CGPoint(x: detectedPokers[j].objectBoundingBox.minX, y: detectedPokers[j].objectBoundingBox.minY)
             let distance = coordinateI.distanceTo(coordinateJ)
