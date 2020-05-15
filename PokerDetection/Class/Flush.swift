@@ -61,6 +61,14 @@ func pokerFlush() -> String {
         return listPokers()
     }
     
+    print(pokers)
+    print(isInOrder())
+    print(pokerNumber2LogicalNumber(pokers[0].pokerNumber))
+    print(pokerNumber2LogicalNumber(pokers[1].pokerNumber))
+    print(pokerNumber2LogicalNumber(pokers[2].pokerNumber))
+    print(pokerNumber2LogicalNumber(pokers[3].pokerNumber))
+    print(pokerNumber2LogicalNumber(pokers[4].pokerNumber))
+    
     if pokers[0].pokerSuit == pokers[1].pokerSuit, pokers[0].pokerSuit == pokers[2].pokerSuit, pokers[0].pokerSuit == pokers[3].pokerSuit, pokers[0].pokerSuit == pokers[4].pokerSuit {
         
         // all suit is same case
@@ -107,10 +115,10 @@ func pokerRepeatCombinations(with combinationThusFar: [Poker] = [], from array: 
 }
 
 func isInOrder()-> Bool {
-    if pokerNumber2LogicalNumber(pokers[0].pokerNumber) - pokerNumber2LogicalNumber(pokers[1].pokerNumber) != -1, pokerNumber2LogicalNumber(pokers[1].pokerNumber) - pokerNumber2LogicalNumber(pokers[2].pokerNumber) != -1, pokerNumber2LogicalNumber(pokers[2].pokerNumber) - pokerNumber2LogicalNumber(pokers[3].pokerNumber) != -1, pokerNumber2LogicalNumber(pokers[3].pokerNumber) - pokerNumber2LogicalNumber(pokers[4].pokerNumber) != -1 {
-        return false
-    } else {
+    if pokerNumber2LogicalNumber(pokers[0].pokerNumber) - pokerNumber2LogicalNumber(pokers[1].pokerNumber) == -1, pokerNumber2LogicalNumber(pokers[1].pokerNumber) - pokerNumber2LogicalNumber(pokers[2].pokerNumber) == -1, pokerNumber2LogicalNumber(pokers[2].pokerNumber) - pokerNumber2LogicalNumber(pokers[3].pokerNumber) == -1, pokerNumber2LogicalNumber(pokers[3].pokerNumber) - pokerNumber2LogicalNumber(pokers[4].pokerNumber) == -1 {
         return true
+    } else {
+        return false
     }
 }
 
