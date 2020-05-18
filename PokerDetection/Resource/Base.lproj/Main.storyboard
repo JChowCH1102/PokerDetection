@@ -23,9 +23,8 @@
                                     <segue destination="QYz-3p-NrI" kind="show" id="V6h-3x-ORS"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image-bg" translatesAutoresizingMaskIntoConstraints="NO" id="gwM-St-YaE">
-                                <rect key="frame" x="0.0" y="39" width="426" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-bg" translatesAutoresizingMaskIntoConstraints="NO" id="gwM-St-YaE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMS-T7-yJI">
                                 <rect key="frame" x="299" y="817" width="65" height="45"/>
@@ -41,7 +40,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eMS-T7-yJI" secondAttribute="trailing" id="6zE-8f-N9d"/>
+                            <constraint firstItem="gwM-St-YaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7wX-qy-Fnb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gwM-St-YaE" secondAttribute="bottom" id="UpO-il-1nq"/>
+                            <constraint firstItem="gwM-St-YaE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZgL-ZA-78c"/>
                             <constraint firstItem="eMS-T7-yJI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="299" id="lNc-UZ-BjU"/>
+                            <constraint firstAttribute="trailing" secondItem="gwM-St-YaE" secondAttribute="trailing" id="raY-7j-Oob"/>
                             <constraint firstItem="eMS-T7-yJI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uYk-ag-b3L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
